@@ -34,9 +34,6 @@
   # Timezone
   time.timeZone = "America/Toronto";
 
-  # X
-  #services.xserver.enable = true;
-  services.xserver.xwayland.enable = true;
 
   #NvidiaConfig
   services.xserver.videoDrivers = ["nvidia"];
@@ -67,7 +64,12 @@
   # System packages
   environment.systemPackages = with pkgs; [
     libevdev
+    xwayland
   ];
+
+  # X
+  #services.xserver.enable = true;
+  services.xserver.xwayland.enable = true;
 
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM = true;
