@@ -21,6 +21,7 @@
     curl
     vivid
     highlight
+    less
     # Applications
     zsh
     firefox

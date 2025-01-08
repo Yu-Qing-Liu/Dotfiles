@@ -34,6 +34,10 @@
   # Timezone
   time.timeZone = "America/Toronto";
 
+  # X
+  #services.xserver.enable = true;
+  services.xserver.xwayland.enable = true;
+
   #NvidiaConfig
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
