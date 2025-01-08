@@ -64,15 +64,11 @@
   # System packages
   environment.systemPackages = with pkgs; [
     libevdev
-    xwayland
   ];
-
-  # X
-  #services.xserver.enable = true;
-  services.xserver.xwayland.enable = true;
 
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM = true;
+  programs.hyprland.xwayland.enable = true;
   
   # Users
   programs.zsh.enable = true;

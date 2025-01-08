@@ -15,7 +15,4 @@ cp -f /etc/nixos/hardware-configuration.nix "$DIR"/nixos/
 mkdir -p ~/.config/hypr/
 cp ./home/programs/hypr/images/* ~/.config/hypr
 
-# .profile
-cp ./.profile ~/
-
 sudo nixos-rebuild switch --flake .
