@@ -20,7 +20,7 @@ window#waybar.bar1 {
 }
 
 #workspaces button {
-    padding: 4px 16px 0 16px;
+    padding: 0 16px 0 16px;
     margin: 0 4px 0 0;
     outline: 0;
     color: #ffffff;
@@ -43,7 +43,7 @@ window#waybar.bar1 {
 
 #language {
     color: #ffffff;
-    padding: 4px 0 0 0;
+    padding: 0 0 0 0;
     background-color:rgba(0,0,0,0.75);
 }
 
@@ -81,7 +81,7 @@ window#waybar.bar1 {
 
 #cpu {
     color: #ffffff;
-    padding: 4px 10px 0 0;
+    padding: 0 10px 0 0;
     background-color:rgba(0,0,0,0.75);
 }
 
@@ -94,12 +94,12 @@ window#waybar.bar1 {
 
 #memory {
     color: #ffffff;
-    padding: 4px 0 0 0;
+    padding: 0 0 0 0;
     background-color:rgba(0,0,0,0.75);
 }
 
 #custom-clock-icon {
-    margin-left: 10px;
+    margin-left: 25px;
     color: #ffa500;
     font-size: 16px;
     padding: 0 10px 0 16px;
@@ -110,14 +110,14 @@ window#waybar.bar1 {
 
 #clock {
     color: #ffffff;
-    padding: 4px 16px 0 0;
+    padding: 0 16px 0 0;
     background-color:rgba(0,0,0,0.75);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
 
 #custom-date-icon {
-    margin-left: 10px;
+    margin-left: 250px;
     color: #ffa500;
     font-size: 16px;
     padding: 0 10px 0 16px;
@@ -128,14 +128,14 @@ window#waybar.bar1 {
 
 #custom-date {
     color: #ffffff;
-    padding: 4px 16px 0 0;
+    padding: 0 16px 0 0;
     background-color:rgba(0,0,0,0.75);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
 
 #custom-power {
-    margin-left: 10px;
+    margin-left: 25px;
     color: #ffffff;
     padding: 0px 5px 0 10px;
     background-color:rgba(0,0,0,0.75);
@@ -151,21 +151,21 @@ window#waybar.bar1 {
 
 #wireplumber {
     color: #ffffff;
-    padding: 4px 0 0 4px;
+    padding: 0 0 0 4px;
     background-color:rgba(0,0,0,0.75);
 }
       '';
-      settings =
+settings =
 [
     {
         "mode" = "overlay";
         "fixed-center" = false;
         "name" = "bar1";
         "output" = [
-	    "eDP-1"
-	    "DP-1"
-	    "DP-2"
-	];
+            "eDP-1"
+            "DP-1"
+            "DP-2"
+        ];
         "margin" = "4px 12px 0px 11px";
         "layer" = "bottom";
         "position" = "top";
