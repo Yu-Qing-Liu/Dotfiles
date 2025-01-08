@@ -1,10 +1,49 @@
-{ pkgs, ... }:
-{
-  # Ensure `vivid` (or its related functionality) is available for generating LS_COLORS
-  home.packages = [
-    pkgs.vivid
-  ];
+{ config, pkgs, ... }:
+let
+  customOhMyZshTheme = ''
+  # Define ANSI color codes
+  blue="%F{blue}"
+  cyan="%F{cyan}"
+  green="%F{green}"
+  magenta="%F{magenta}"
+  yellow="%F{yellow}"
+  white="%F{white}"
+  red="%F{red}"
+  black="%F{black}"
+  reset="%b%f"
 
+  # Function to get the relative path
+  function get_rel_path() {
+    absolute_path="''\${PWD}"
+    home_dir="$HOME"
+    if [[ "$absolute_path" == "$home_dir"* ]]; then
+      echo "$absolute_path" | sed "s|^$home_dir|~|"
+    else
+      echo "$absolute_path"
+    fi
+  }
+
+  # Function to integrate venv indicator when activating python virtual environment.
+  # Recommend disabling the global one with 'export VIRTUAL_ENV_DISABLE_PROMPT=1'
+  function venv_name() {
+    if [[ -n $VIRTUAL_ENV ]]; then
+      echo -n "''\${yellow} $(basename "''\${VIRTUAL_ENV}")''\${magenta}⦘─⦗"
+    else
+      echo -n ""
+    fi
+  }
+
+  # PS1
+  PS1='$(venv=$(venv_name); branch=$(git_current_branch); path=$(get_rel_path); \
+  if [ -n "''\${branch}" ]; then echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${red}󰊢 ''\${branch}*''\${magenta}⦘─⦗''\${black} %~''\${magenta}⦘"; \
+  else echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${black} %~''\${magenta} "; fi)
+  └─⦗''\${reset}%B$%b''\${magenta}⦘''\${reset}'
+  # PS2
+  PS2=' %B~%b '
+  '';
+in
+{
+  home.file.".oh-my-zsh/custom/themes/BigShrimp.zsh-theme".text = customOhMyZshTheme;
   # Enable Zsh
   programs.zsh = {
     enable = true;
@@ -22,19 +61,8 @@
       ranger = "ranger-cd";
     };
 
-    oh-my-zsh = {
-      enable = true;
-      theme = "fox";
-      plugins = [
-        "command-not-found"
-        "git"
-        "history"
-        "sudo"
-      ];
-    };
-
-    # Extra Zsh initialization
     initExtra = ''
+      VIRTUAL_ENV_DISABLE_PROMPT=1
       SYSTEMD_EDITOR=nvim
       EDITOR=nvim
       VISUAL=nvim
@@ -53,6 +81,18 @@
         rm -f -- "$temp_file"
       }
     '';
+
+    oh-my-zsh = {
+      enable = true;
+      custom = "${config.home.homeDirectory}/.oh-my-zsh/custom";
+      theme = "BigShrimp";
+      plugins = [
+        "command-not-found"
+        "git"
+        "history"
+        "sudo"
+      ];
+    };
   };
 
   programs.fzf = {
