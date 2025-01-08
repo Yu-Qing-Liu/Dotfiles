@@ -117,7 +117,6 @@ window#waybar.bar1 {
 }
 
 #custom-date-icon {
-    margin-left: 250px;
     color: #ffa500;
     font-size: 16px;
     padding: 0 10px 0 16px;
@@ -159,7 +158,7 @@ settings =
 [
     {
         "mode" = "overlay";
-        "fixed-center" = false;
+        "fixed-center" = true;
         "name" = "bar1";
         "output" = [
             "eDP-1"
@@ -172,7 +171,7 @@ settings =
         "modules-left" = [
             "hyprland/workspaces"
         ];
-        "modules-right" = [
+        "modules-center" = [
             "custom/cpu-icon"
             "cpu"
             "custom/memory-icon"
@@ -184,6 +183,8 @@ settings =
             "battery"
             "bluetooth"
             "custom/network"
+        ];
+        "modules-right" = [
             "custom/date-icon"
             "custom/date"
             "custom/clock-icon"

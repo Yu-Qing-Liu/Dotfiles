@@ -13,8 +13,8 @@
   # Network
   networking.hostName = "yuqingliu";
   networking.wireless.iwd.enable = true;
-  networking.proxy.httpsProxy = "http:127.0.0.1:3128";
-  networking.proxy.httpProxy = "http:127.0.0.1:3129";
+  # networking.proxy.httpsProxy = "http:127.0.0.1:3128";
+  # networking.proxy.httpProxy = "http:127.0.0.1:3129";
 
   # Bluetooth
   hardware.bluetooth.enable = true;
