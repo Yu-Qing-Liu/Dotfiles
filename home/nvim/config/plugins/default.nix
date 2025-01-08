@@ -1,0 +1,27 @@
+{
+  imports = [
+    ./barbecue-nvim.nix
+    ./bigfile-nvim.nix
+    ./nvim-tree.nix
+    ./nvim-treesitter.nix
+    ./telescope.nix
+    ./harpoon.nix
+    ./bufferline.nix
+    ./git-blame.nix
+    ./git-signs.nix
+    ./indent-blankline.nix
+    ./lualine.nix
+    ./nvim-autopairs.nix
+    ./nvim-cmp.nix
+    ./nvim-colorizer.nix
+    ./nvim-dap-ui.nix
+    ./nvim-dap-text.nix
+    ./nvim-jtdls.nix
+    ./nvim-luasnip.nix
+    ./nvim-surround.nix
+    ./stay-centered.nix
+    ./vim-commentary.nix
+    ./vim-maximiser.nix
+    ./vimtex.nix
+  ];
+}
