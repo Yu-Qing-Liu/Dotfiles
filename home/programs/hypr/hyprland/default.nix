@@ -2,6 +2,14 @@
 {
 home.file.".config/hypr/hyprland.conf".text = ''
 ################
+### Env      ###
+################
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+env = LIBVA_DRIVER_NAME,nvidia
+env = HYPRCURSOR_SIZE,32
+
+################
 ### MONITORS ###
 ################
 
@@ -67,20 +75,20 @@ decoration {
     fullscreen_opacity = 0.8
 
     shadow {
-	enabled = true
-	range = 4
-	render_power = 3
-	color = rgba(1a1a1aee)
+        enabled = true
+        range = 4
+        render_power = 3
+        color = rgba(1a1a1aee)
     }
 
     # https://wiki.hyprland.org/Configuring/Variables/#blur
     blur {
-	enabled = true
-	size = 3
-	passes = 5
-	new_optimizations = true
-	xray = true
-	popups = true
+        enabled = true
+        size = 3
+        passes = 5
+        new_optimizations = true
+        xray = true
+        popups = true
     }
     layerrule = blur,input_methods_ignorealpha,waybar
 }

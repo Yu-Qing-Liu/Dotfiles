@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-    home.file.".config/alacritty/alacritty.toml".text = ''
+home.file.".config/alacritty/alacritty.toml".text = ''
 [colors.primary]
 background = '#1f0033'
 foreground = '#c3e600'
@@ -42,7 +42,7 @@ opacity = 0.5
 blur = true
 
 [font]
-size = 18
+size = 20
 
 [keyboard]
 bindings = [

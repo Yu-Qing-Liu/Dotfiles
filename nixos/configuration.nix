@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
@@ -8,6 +8,7 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 1;
   
   # Network
   networking.hostName = "yuqingliu";
@@ -64,18 +65,26 @@
   # System packages
   environment.systemPackages = with pkgs; [
     libevdev
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
-
+  
+  # App settings
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM = true;
   programs.hyprland.xwayland.enable = true;
+  
+  # Enable docker
+  virtualisation.docker.enable = true;
   
   # Users
   programs.zsh.enable = true;
   users.users.admin = {
     isNormalUser = true;
     description = "admin";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ 
+      "wheel"
+      "docker"
+    ];
     shell = pkgs.zsh;
   };
   

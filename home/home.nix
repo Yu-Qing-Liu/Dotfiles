@@ -14,6 +14,7 @@
     # Firmware
     alsa-lib
     sof-firmware
+    efibootmgr
     # Commands
     neofetch
     tree
@@ -32,6 +33,10 @@
     pavucontrol
     rustup
     rofi-wayland
+    # Virtualization
+    docker
+    docker-buildx
+    nvidia-docker
     # Hypr
     hyprlock
     hyprpaper
@@ -49,7 +54,7 @@
       enable = true;
     };
   };
-
+  
   programs.home-manager.enable = true;
 
   home.stateVersion = "25.05";
