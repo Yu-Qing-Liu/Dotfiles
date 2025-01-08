@@ -23,6 +23,8 @@
     vivid
     highlight
     less
+    zip
+    unzip
     # Applications
     zsh
     firefox
@@ -33,6 +35,7 @@
     pavucontrol
     rustup
     rofi-wayland
+    wtype
     # Virtualization
     docker
     docker-buildx
@@ -44,6 +47,14 @@
     noto-fonts
     nerd-fonts.noto
     font-awesome
+    # Neovim dependencies
+    lua51Packages.luarocks
+    lua51Packages.lua
+    nodejs_23
+    ripgrep
+    fd
+    zathura
+    texliveFull
     # Programming languages
     python313
     gcc

@@ -1,7 +1,5 @@
 { pkgs, ... }:
-
 {
-
   # Ensure `vivid` (or its related functionality) is available for generating LS_COLORS
   home.packages = [
     pkgs.vivid
@@ -26,7 +24,7 @@
 
     oh-my-zsh = {
       enable = true;
-      theme = "xiong-chiamiov";
+      theme = "fox";
       plugins = [
         "command-not-found"
         "git"

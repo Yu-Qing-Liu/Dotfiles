@@ -13,6 +13,12 @@
   # Network
   networking.hostName = "yuqingliu";
   networking.wireless.iwd.enable = true;
+  networking.proxy.default = "127.0.0.1,localhost,internal.domain";
+
+  environment.variables = {
+    HTTP_PROXY = "http://127.0.0.1:8080";
+    HTTPS_PROXY = "http://127.0.0.1:8080";
+  };
   
   # Bluetooth
   hardware.bluetooth.enable = true;
@@ -102,12 +108,6 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 7d";
-  };
-  
-  # Auto update
-  system.autoUpgrade = {
-   enable = true;
-   channel = "https://nixos.org/channels/nixos-24.11";
   };
   
   # System version
