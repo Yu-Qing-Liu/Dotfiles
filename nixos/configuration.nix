@@ -39,6 +39,7 @@
 
 
   #NvidiaConfig
+  hardware.graphics.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     modesetting.enable = true;
@@ -68,14 +69,19 @@
   environment.systemPackages = with pkgs; [
     libevdev
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    docker
+    docker-buildx
+    nvidia-docker
   ];
   
   # App settings
-  programs.hyprland.enable = true;
-  programs.hyprland.withUWSM = true;
-  programs.hyprland.xwayland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
   
-  # Enable docker
+  hardware.nvidia-container-toolkit.enable = true;
   virtualisation.docker.enable = true;
   
   # Users

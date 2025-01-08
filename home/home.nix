@@ -36,10 +36,6 @@
     rustup
     rofi-wayland
     wtype
-    # Virtualization
-    docker
-    docker-buildx
-    nvidia-docker
     # Hypr
     hyprlock
     hyprpaper
