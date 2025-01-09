@@ -51,6 +51,7 @@
     fd
     zathura
     texliveFull
+    tree-sitter
     # Programming languages
     python313
     gcc
