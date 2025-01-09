@@ -35,8 +35,8 @@ let
 
   # PS1
   PS1='$(venv=$(venv_name); branch=$(git_current_branch); path=$(get_rel_path); \
-  if [ -n "''\${branch}" ]; then echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${red}󰊢 ''\${branch}*''\${magenta}⦘─⦗''\${black} %~''\${magenta}⦘"; \
-  else echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${black} %~''\${magenta}⦘"; fi)
+  if [ -n "''\${branch}" ]; then echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${red}󰊢 ''\${branch}*''\${magenta}⦘─⦗''\${black} %~''\${magenta}⦘"; \
+  else echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${black} %~''\${magenta}⦘"; fi)
   └─⦗''\${reset}%B$%b''\${magenta}⦘> ''\${reset}'
   # PS2
   PS2=' %B~%b '
