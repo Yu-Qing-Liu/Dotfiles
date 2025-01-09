@@ -1,95 +1,128 @@
 { config, pkgs, ... }:
 {
-    home.file.".config/rofi/config.rasi".text = ''
-/* MACOS LAUNCHPAD LIKE THEME FOR ROFI */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
-
+home.file.".config/rofi/config.rasi".text = ''
 * {
-    font: "Montserrat 20";
+    bg-col:  #1e1e2e;
+    bg-col-light: #1e1e2e;
+    border-col: #1e1e2e;
+    selected-col: #1e1e2e;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #f38ba8;
+    grey: #6c7086;
 
-    bg0:  #24242480;
-    bg1:  #363636;
-    bg2:  #f5f5f520;
-    bg3:  #f5f5f540;
-    bg4:  #399a9C4D;
+    width: 800;
+    font: "Noto Nerd Font 24";
+}
 
-    fg0:  #f5f5f5;
-    fg1:  #f5f5f580;
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: " 󰀻  Apps ";
+    display-run: "   Run ";
+    sidebar-mode: true;
+}
 
-    background-color: transparent;
-    text-color:       @fg0;
-    padding:          0px;
-    margin:           0px;
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
 }
 
 window {
-  fullscreen: true;
-  padding: 0em;
-  background-color: @bg0;
+    height: 560px;
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
 }
 
 mainbox {
-  padding: 0px;
+    background-color: @bg-col;
 }
 
 inputbar {
-  background-color: @bg2;
-
-  margin: 10% 25% 6% 25%;
-  padding: 10px 0px;
-
-  border: 4px;
-  border-radius: 100px;
-  border-color: @bg3;
-
-  children: [icon-search,entry];
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 prompt {
-  enabled:  false;
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 10px 0px 0px 18px;
 }
 
-icon-search {
-  expand: false;
-  filename: "search";
-  vertical-align: 0.5;
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
 }
 
 entry {
-  placeholder: "Search";
-  placeholder-color: @bg2;
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
 }
 
 listview {
-  margin: 0px 10% 15% 10%;
-  spacing: 0px 0px 0px 0px;
-  columns: 4;
-  fixed-columns: true;
-}
-
-element, element-text, element-icon {
-  cursor: pointer;
+    border: 0px 0px 0px;
+    padding: 0px 0px 0px;
+    margin: 20px 16px 0px 20px;
+    columns: 1;
+    lines: 5;
+    background-color: @bg-col;
 }
 
 element {
-  padding: 30px 0px 30px 30px;
-  orientation: horizontal;
-  border-radius: 30px;
-}
-
-element selected {
-  background-color: @bg4;
+    padding: 6px;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
 }
 
 element-icon {
-  padding: 0px 0px 0px 0px;
-  size: 4em;
-  vertical-align: 0.5;
+    size: 50px;
 }
 
-element-text {
-  padding: 0px 0px 0px 20px;
-  vertical-align: 0.5;
+element selected {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
 }
-    '';
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
+}
+
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
+}
+'';
 }

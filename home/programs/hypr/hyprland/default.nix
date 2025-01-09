@@ -46,7 +46,7 @@ exec-once = hyprlock
 #####################
 general {
     gaps_in = 0,10,10,0
-    gaps_out = 40,10,10,10
+    gaps_out = 36,10,10,10
 
     border_size = 2
 
