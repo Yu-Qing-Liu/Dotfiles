@@ -85,7 +85,7 @@ decoration {
     blur {
         enabled = true
         size = 3
-        passes = 5
+        passes = 4
         new_optimizations = true
         xray = true
         popups = true

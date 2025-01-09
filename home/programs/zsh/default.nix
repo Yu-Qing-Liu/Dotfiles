@@ -27,17 +27,31 @@ let
   # Recommend disabling the global one with 'export VIRTUAL_ENV_DISABLE_PROMPT=1'
   function venv_name() {
     if [[ -n $VIRTUAL_ENV ]]; then
-      echo -n "''\${yellow} $(basename "''\${VIRTUAL_ENV}")''\${magenta}⦘─⦗"
+      echo -n "''\${yellow} $(basename "''\${VIRTUAL_ENV}")''\${magenta} ─ "
+    else
+      echo -n ""
+    fi
+  }
+
+  # Check if there are any uncommitted changes
+  git_is_dirty() {
+    local root=$(git rev-parse --show-toplevel 2> /dev/null)
+    if [[ -n $root ]]; then
+      if [[ -n "$(git status --porcelain)" ]]; then
+        echo "''\${red} 🞊"
+      else
+        echo "''\${cyan} 🞊"
+      fi
     else
       echo -n ""
     fi
   }
 
   # PS1
-  PS1='$(venv=$(venv_name); branch=$(git_current_branch); path=$(get_rel_path); \
-  if [ -n "''\${branch}" ]; then echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${red}󰊢 ''\${branch}*''\${magenta}⦘─⦗''\${black} %~''\${magenta}⦘"; \
-  else echo "''\${magenta}┌─⦗''\${green}󱩊 %n''\${magenta}⦘─⦗''\${blue} %m''\${magenta}⦘─⦗''\${venv}''\${black} %~''\${magenta}⦘"; fi)
-  └─⦗''\${reset}%B$%b''\${magenta}⦘> ''\${reset}'
+  PS1='$(venv=$(venv_name); dirty=$(git_is_dirty); branch=$(git_current_branch); path=$(get_rel_path); \
+  if [ -n "''\${branch}" ]; then echo "''\${magenta}┌─╸''\${green}󱩊 %n''\${magenta} ━ ''\${blue} %m''\${magenta} ━ ''\${venv}''\${white} ''\${branch}*''\${dirty}''\${magenta} ━ ''\${black}󰝰 %~''\${magenta} "; \
+  else echo "''\${magenta}┌─╸''\${green}󱩊 %n''\${magenta} ━ ''\${blue} %m''\${magenta} ━ ''\${venv}''\${black}󰝰 %~''\${magenta} "; fi)
+  └──╸''\${reset}%B$%b''\${reset} '
   # PS2
   PS2=' %B~%b '
   '';

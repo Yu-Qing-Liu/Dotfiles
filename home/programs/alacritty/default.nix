@@ -2,7 +2,7 @@
 {
 home.file.".config/alacritty/alacritty.toml".text = ''
 [colors.primary]
-background = '#1f0033'
+background = '#14141f'
 foreground = '#c3e600'
 
 [colors.normal]
@@ -12,13 +12,13 @@ green   = '#76946a'
 yellow  = '#ffcc00'
 blue    = '#7e9cd8'
 magenta = '#957fb8'
-cyan    = '#6a9589'
-white   = '#c8c093'
+cyan    = '#98bb6c'
+white   = '#737373'
 
 [colors.bright]
 black   = '#727169'
 red     = '#e82424'
-green   = '#98bb6c'
+green   = '#00ff00'
 yellow  = '#e6c384'
 blue    = '#7fb4ca'
 magenta = '#938aa9'
@@ -38,7 +38,7 @@ index = 17
 color = '#ff5d62'
 
 [window]
-opacity = 0.75
+opacity = 0.5
 blur = true
 
 [font]
