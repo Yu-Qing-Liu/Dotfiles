@@ -11,7 +11,8 @@ let
 in
 {
   imports = [
-    ./config
+    ./init.nix
+    ./configuration.nix
   ];
   programs.neovim = {
     enable = true;

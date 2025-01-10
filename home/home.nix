@@ -2,7 +2,13 @@
   
   imports = [
     ./nvim
-    ./programs
+    ./hypr
+    ./rofi
+    ./waybar
+    ./alacritty
+    ./zsh
+    ./vivid
+    ./ranger
   ];
 
   home = {
