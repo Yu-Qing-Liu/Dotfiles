@@ -18,7 +18,5 @@ return {
     require('kanagawa').setup(opts)
     vim.o.background = "dark"
     vim.cmd("colorscheme kanagawa-wave")
-    vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#273638' })
-    vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange', bold = true, underline = false, bg = '#273638' })
   end
 }
