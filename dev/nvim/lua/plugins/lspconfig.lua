@@ -59,6 +59,9 @@ return {
 
     -- Lua LSP settings
     lspconfig.lua_ls.setup {
+      cmd = {
+        "lua-lsp"
+      },
       settings = {
         Lua = {
           diagnostics = {

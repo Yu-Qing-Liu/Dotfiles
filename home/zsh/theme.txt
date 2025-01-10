@@ -35,9 +35,9 @@ git_is_dirty() {
   local root=$(git rev-parse --show-toplevel 2> /dev/null)
   if [[ -n $root ]]; then
     if [[ -n "$(git status --porcelain)" ]]; then
-      echo "${red} 🞊"
+      echo "${red}🞊"
     else
-      echo "${cyan} 🞊"
+      echo "${cyan}🞊"
     fi
   else
     echo -n ""

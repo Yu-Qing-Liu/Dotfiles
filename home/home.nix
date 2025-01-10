@@ -51,6 +51,7 @@
     font-awesome
     # Neovim dependencies
     lua51Packages.luarocks
+    lua51Packages.lua-lsp
     lua51Packages.lua
     nodejs_23
     ripgrep
