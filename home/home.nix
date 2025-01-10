@@ -21,6 +21,7 @@
     alsa-lib
     sof-firmware
     # Commands
+    lazygit
     neofetch
     tree
     wget
