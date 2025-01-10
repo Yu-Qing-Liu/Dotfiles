@@ -6,14 +6,14 @@ return {
   priority = 1000,         -- Load the colorscheme before other non-lazy-loaded plugins
   opts = {
     transparent = true,
+    terminalColors = false,
     colors = {
       theme = {
         all = {
           ui = { bg_gutter = 'none' },
         },
-        black = '#ffcc66'
       }
-    }
+    },
   },
   config = function(_, opts)
     require('kanagawa').setup(opts)
