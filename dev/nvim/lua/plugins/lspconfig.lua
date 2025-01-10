@@ -31,10 +31,7 @@ return {
 
     require('mason-tool-installer').setup({
       -- Install these linters, formatters, debuggers automatically
-      ensure_installed = {
-        'java-debug-adapter',
-        'java-test',
-      },
+      ensure_installed = {},
     })
 
     -- There is an issue with mason-tools-installer running with VeryLazy, since it triggers on VimEnter which has already occurred prior to this plugin loading so we need to call install explicitly
