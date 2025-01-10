@@ -10,7 +10,8 @@ return {
       theme = {
         all = {
           ui = { bg_gutter = 'none' },
-        }
+        },
+        black = '#ffcc66'
       }
     }
   },
