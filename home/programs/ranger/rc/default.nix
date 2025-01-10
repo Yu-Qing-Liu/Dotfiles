@@ -1,6 +1,6 @@
 { config, pkgs, ...}:
 {
-    home.file.".config/ranger/rc.conf".text = ''
+home.file.".config/ranger/rc.conf".text = ''
 # ===================================================================
 # This file contains the default startup commands for ranger.
 # To change them, it is recommended to create either /etc/ranger/rc.conf
@@ -760,5 +760,7 @@ tmap <delete>   eval -q fm.ui.taskview.task_remove()
 tmap <C-l> redraw_window
 tmap <ESC> taskview_close
 copytmap <ESC> q Q w <C-c>
-    '';
+
+default_linemode devicons
+'';
 }

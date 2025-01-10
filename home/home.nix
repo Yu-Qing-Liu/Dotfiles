@@ -24,6 +24,7 @@
     less
     zip
     unzip
+    xorg.xhost
     # Applications
     zsh
     firefox
