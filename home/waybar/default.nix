@@ -8,7 +8,7 @@
       style = builtins.readFile ./style.css;
       settings = [{
         "mode" = "overlay";
-        "fixed-center" = true;
+        "fixed-center" = false;
         "name" = "bar1";
         "output" = [
             "eDP-1"
