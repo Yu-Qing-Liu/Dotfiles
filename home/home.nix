@@ -43,6 +43,7 @@
     rustup
     rofi-wayland
     wtype
+    obs-studio
     # Hypr
     hyprlock
     hyprpaper
