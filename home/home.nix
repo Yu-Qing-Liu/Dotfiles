@@ -44,6 +44,7 @@
     rofi-wayland
     wtype
     obs-studio
+    vlc
     # Hypr
     hyprlock
     hyprpaper
