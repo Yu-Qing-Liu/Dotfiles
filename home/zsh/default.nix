@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  home.file.".oh-my-zsh/custom/themes/custom.zsh-theme".text = builtins.readFile ../../dev/zsh/theme.zsh;
+  home.file.".oh-my-zsh/custom/themes/custom.zsh-theme".text = builtins.readFile ../../dev/zsh/custom.zsh-theme;
   # Enable Zsh
   programs.zsh = {
     enable = true;
