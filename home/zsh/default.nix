@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  home.file.".oh-my-zsh/custom/themes/custom.zsh-theme".text = builtins.readFile ../../dev/zsh/theme.txt;
+  home.file.".oh-my-zsh/custom/themes/custom.zsh-theme".text = builtins.readFile ../../dev/zsh/theme.zsh;
   # Enable Zsh
   programs.zsh = {
     enable = true;
@@ -18,7 +18,7 @@
       ranger = "ranger-cd";
     };
 
-    initExtra = builtins.readFile ../../dev/zsh/zshrc.txt;
+    initExtra = builtins.readFile ../../dev/zsh/zshrc.zsh;
 
     oh-my-zsh = {
       enable = true;
