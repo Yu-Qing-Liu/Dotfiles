@@ -34,6 +34,7 @@
     xorg.xhost
     arch-install-scripts
     qemu
+    quickemu
     # Applications
     zsh
     firefox
