@@ -32,10 +32,7 @@
     zip
     unzip
     xorg.xhost
-    arch-install-scripts
-    qemu
     openssl
-    gnumake
     # Applications
     zsh
     firefox
