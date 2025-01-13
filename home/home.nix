@@ -32,6 +32,7 @@
     zip
     unzip
     xorg.xhost
+    arch-install-scripts
     # Applications
     zsh
     firefox
