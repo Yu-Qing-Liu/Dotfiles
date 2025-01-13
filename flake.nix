@@ -13,16 +13,12 @@
   outputs = { self, nixpkgs, home-manager, ... } @inputs:
   let
     system = "x86_64-linux";
-    crossSystem = {
-      system = "aarch64-linux";  # Target system (ARM64)
-    };
     lib = nixpkgs.lib;
     specialArgs = inputs;
   in {
   nixosConfigurations = {
     yuqingliu = lib.nixosSystem {
       inherit system;
-      crossSystem = crossSystem;
       specialArgs = { inherit inputs; };
         modules = [
           ./nixos/configuration.nix
