@@ -35,6 +35,7 @@
     arch-install-scripts
     qemu
     openssl
+    gnumake
     # Applications
     zsh
     firefox
