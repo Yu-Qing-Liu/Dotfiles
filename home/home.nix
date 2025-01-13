@@ -33,7 +33,6 @@
     unzip
     xorg.xhost
     arch-install-scripts
-    qemu
     # Applications
     zsh
     firefox
