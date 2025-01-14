@@ -63,9 +63,10 @@
     zathura
     texliveFull
     tree-sitter
+    gnumake
+    gcc
     # Programming languages
     python313
-    gcc
   ]);
 
   fonts = {

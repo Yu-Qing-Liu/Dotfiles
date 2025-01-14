@@ -24,7 +24,7 @@ function get_rel_path() {
 # Recommend disabling the global one with 'export VIRTUAL_ENV_DISABLE_PROMPT=1'
 function venv_name() {
   if [[ -n $VIRTUAL_ENV ]]; then
-    echo -n "${yellow} $(basename "${VIRTUAL_ENV}")${magenta} ─ "
+    echo -n "${yellow} $(basename "${VIRTUAL_ENV}")${magenta} ━ "
   else
     echo -n ""
   fi
