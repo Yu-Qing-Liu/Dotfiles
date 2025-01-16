@@ -46,6 +46,7 @@
     wtype
     obs-studio
     vlc
+    libreoffice-qt6
     # Hypr
     hyprlock
     hyprpaper
