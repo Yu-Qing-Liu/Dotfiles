@@ -33,6 +33,7 @@
     unzip
     xorg.xhost
     openssl
+    doxygen
     # Applications
     zsh
     firefox
