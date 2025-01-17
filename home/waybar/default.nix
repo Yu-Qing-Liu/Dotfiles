@@ -21,7 +21,7 @@
         "modules-left" = [
             "hyprland/workspaces"
         ];
-        "modules-center" = [
+        "modules-right" = [
             "custom/cpu-icon"
             "cpu"
             "custom/memory-icon"
@@ -33,8 +33,6 @@
             "battery"
             "bluetooth"
             "custom/network"
-        ];
-        "modules-right" = [
             "custom/date-icon"
             "custom/date"
             "custom/clock-icon"

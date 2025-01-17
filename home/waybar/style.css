@@ -107,6 +107,7 @@ window#waybar.bar1 {
 }
 
 #custom-date-icon {
+    margin-left: 25px;
     color: #ffa500;
     font-size: 16px;
     padding: 0 10px 0 16px;
