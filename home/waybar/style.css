@@ -14,48 +14,49 @@ window#waybar.bar1 {
     margin: 0 4px 0 0;
     outline: 0;
     color: #ffffff;
-    border-radius: 12px;
-    background-color: rgba(0,0,0,0.75);
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.85);
+    border: solid 1px rgba(255,255,255,0.4);
 }
 
 #workspaces button.active {
-    background-color:rgba(0,0,0,0.75);
+    padding: 0 28px 0 28px;
     color: #ffa500;
-    border: solid 1px orange;
+    border: solid 1px #ffa500;
 }
 
 #custom-keyboard-icon {
     color:#ffa500;
     font-size: 14px;
     padding: 0 10px 0 8px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #language {
     color: #ffffff;
     padding: 0 0 0 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #battery {
     color: #ffffff;
     font-size: 16px;
     padding: 0 16px 0 10px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #bluetooth {
     color: #0082FC;
     font-size: 18px;
     padding: 0 8px 0 0px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #custom-network {
     color: #ffffff;
     font-size: 19px;
     padding: 0 24px 0 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
@@ -64,7 +65,7 @@ window#waybar.bar1 {
     color: #ffa500;
     font-size: 16px;
     padding: 0 8px 0 16px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
@@ -72,20 +73,33 @@ window#waybar.bar1 {
 #cpu {
     color: #ffffff;
     padding: 0 10px 0 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #custom-memory-icon {
     color: #ffa500;
     font-size: 14px;
     padding: 0 4px 0 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #memory {
     color: #ffffff;
+    padding: 0 8px 0 0;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#custom-disk-icon {
+    color: #ffa500;
+    font-size: 14px;
+    padding: 0 8px 0 0;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#disk {
+    color: #ffffff;
     padding: 0 0 0 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #custom-clock-icon {
@@ -93,7 +107,7 @@ window#waybar.bar1 {
     color: #ffa500;
     font-size: 16px;
     padding: 0 10px 0 16px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
@@ -101,7 +115,7 @@ window#waybar.bar1 {
 #clock {
     color: #ffffff;
     padding: 0 16px 0 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
@@ -111,7 +125,7 @@ window#waybar.bar1 {
     color: #ffa500;
     font-size: 16px;
     padding: 0 10px 0 16px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
@@ -119,7 +133,7 @@ window#waybar.bar1 {
 #custom-date {
     color: #ffffff;
     padding: 0 16px 0 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
@@ -128,7 +142,7 @@ window#waybar.bar1 {
     margin-left: 25px;
     color: #ffffff;
     padding: 0px 5px 0 10px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
     border-radius: 12px;
 }
 
@@ -136,11 +150,11 @@ window#waybar.bar1 {
     color:#ffa500;
     padding: 0 8px 0 8px;
     font-size: 14px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }
 
 #wireplumber {
     color: #ffffff;
     padding: 0 0 0 4px;
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(255,255,255,0.15);
 }

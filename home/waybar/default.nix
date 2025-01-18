@@ -11,113 +11,125 @@
         "fixed-center" = false;
         "name" = "bar1";
         "output" = [
-            "eDP-1"
-            "DP-1"
-            "DP-2"
+          "eDP-1"
+          "DP-1"
+          "DP-2"
         ];
         "margin" = "4px 12px 0px 11px";
         "layer" = "bottom";
         "position" = "top";
         "modules-left" = [
-            "hyprland/workspaces"
+          "hyprland/workspaces"
         ];
         "modules-right" = [
-            "custom/cpu-icon"
-            "cpu"
-            "custom/memory-icon"
-            "memory"
-            "custom/audio-icon"
-            "wireplumber"
-            "custom/keyboard-icon"
-            "hyprland/language"
-            "battery"
-            "bluetooth"
-            "custom/network"
-            "custom/date-icon"
-            "custom/date"
-            "custom/clock-icon"
-            "clock"
-            "custom/power"
+          "custom/cpu-icon"
+          "cpu"
+          "custom/memory-icon"
+          "memory"
+          "custom/disk-icon"
+          "disk"
+          "custom/audio-icon"
+          "wireplumber"
+          "custom/keyboard-icon"
+          "hyprland/language"
+          "battery"
+          "bluetooth"
+          "custom/network"
+          "custom/date-icon"
+          "custom/date"
+          "custom/clock-icon"
+          "clock"
+          "custom/power"
         ];
         "hyprland/workspaces" = {
-            "format" = "{icon}";
-            "disable-scroll" = true;
+          "format" = "{icon}";
+          "all-outputs" = true;
+          "disable-scroll" = true;
         };
         "custom/cpu-icon" = {
-            "format" = "";
+          "format" = "";
         };
         "cpu" = {
-            "interval" = 5;
-            "format" = "{}%";
-            "max-length" = 10;
+          "interval" = 5;
+          "format" = "{}%";
+          "max-length" = 10;
         };
         "custom/memory-icon" = {
-            "format" = "";
+          "format" = "";
         };
         "memory" = {
-            "interval" = 5;
-            "format" = "{}%";
-            "max-length" = 10;
+          "interval" = 5;
+          "format" = "{}%";
+          "max-length" = 10;
+        };
+        "custom/disk-icon" = {
+          "format" = "";
+        };
+        "disk" = {
+          "interval" = 30;
+          "format" = "{percentage_used}%";
+          "unit" = "GB";
+          "path" = "/";
         };
         "custom/audio-icon" = {
-            "format" = "";
+          "format" = "";
         };
         "wireplumber" = {
-            "format" = "{volume}%";
-            "on-click" = "pavucontrol";
-            "max-volume" = 150;
-            "scroll-step" = 0.2;
+          "format" = "{volume}%";
+          "on-click" = "pavucontrol";
+          "max-volume" = 150;
+          "scroll-step" = 0.2;
         };
         "custom/keyboard-icon" = {
-            "format" = "";
-            "on-click" = "/home/admin/.config/waybar/keyboard/toggle_keyboard_layout.sh";
+          "format" = "";
+          "on-click" = "/home/admin/.config/waybar/keyboard/toggle_keyboard_layout.sh";
         };
         "hyprland/language" = {
-            "format" = "{short}";
-            "on-click" = "/home/admin/.config/waybar/keyboard/toggle_keyboard_layout.sh";
+          "format" = "{short}";
+          "on-click" = "/home/admin/.config/waybar/keyboard/toggle_keyboard_layout.sh";
         };
         "battery" = {
-            "format" = "{icon}";
-            "format-alt" = "{time} {icon}";
-            "format-alt-click" = "click-right";
-            "format-icons" = [
-                ""
-                ""
-                ""
-                ""
-            ];
-            "format-charging" = " ";
-            "interval" = 30;
-            "states" = {
-                "warning" = 45;
-                "critical" = 20;
-            };
+          "format" = "{icon}";
+          "format-alt" = "{time} {icon}";
+          "format-alt-click" = "click-right";
+          "format-icons" = [
+            ""
+            ""
+            ""
+            ""
+          ];
+          "format-charging" = " ";
+          "interval" = 30;
+          "states" = {
+            "warning" = 45;
+            "critical" = 20;
+          };
         };
         "bluetooth" = {
-            "format" = "";
+          "format" = "";
         };
         "custom/network" = {
-            "format" = "";
+          "format" = "";
         };
         "custom/clock-icon" = {
-            "format" = "";
+          "format" = "";
         };
         "clock" = {
-            "interval" = 60;
-            "format" = "{:%I:%M %p}";
-            "max-length" = 25;
+          "interval" = 60;
+          "format" = "{:%I:%M %p}";
+          "max-length" = 25;
         };
         "custom/date-icon" = {
-            "format" = "";
+          "format" = "";
         };
         "custom/date" = {
-            "interval" = 86400;
-            "exec" = "date +'%A, %B %d, %Y'";
-            "format" = "{}";
+          "interval" = 86400;
+          "exec" = "date +'%A, %B %d, %Y'";
+          "format" = "{}";
         };
         "custom/power" = {
-            "format" = "⏻ ";
-            "on-click" = "shutdown -h now";
+          "format" = "⏻ ";
+          "on-click" = "shutdown -h now";
         };
       }];
     };
