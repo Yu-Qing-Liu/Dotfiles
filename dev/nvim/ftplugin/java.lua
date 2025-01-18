@@ -2,6 +2,7 @@
 local jdtls = require('jdtls')
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.env.HOME .. '/Libs/jdtls-workspace/' .. project_name
+local java_home = os.getenv("JAVA_HOME")
 
 -- Needed for debugging
 local bundles = {
@@ -54,17 +55,9 @@ local config = {
         -- The runtime name parameters need to match specific Java execution environments.  See https://github.com/tamago324/nlsp-settings.nvim/blob/2a52e793d4f293c0e1d61ee5794e3ff62bfbbb5d/schemas/_generated/jdtls.json#L317-L334
         runtimes = {
           {
-            name = "JavaSE-17",
-            path = "/usr/lib/jvm/java-17-openjdk",
-          },
-          {
             name = "JavaSE-21",
-            path = "/usr/lib/jvm/java-21-openjdk",
+            path = java_home,
           },
-          {
-            name = "JavaSE-23",
-            path = "/usr/lib/jvm/java-23-openjdk",
-          }
         }
       },
       maven = {

@@ -79,6 +79,11 @@
     withUWSM = true;
     xwayland.enable = true;
   };
+
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk21;
+  };
   
   hardware.nvidia-container-toolkit.enable = true;
   virtualisation.docker.enable = true;

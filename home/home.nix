@@ -42,7 +42,7 @@
     git
     wl-clipboard
     pavucontrol
-    rustup
+    prismlauncher
     rofi-wayland
     wtype
     obs-studio
@@ -68,6 +68,7 @@
     gnumake
     gcc
     # Programming languages
+    rustup
     python313
   ]);
 
