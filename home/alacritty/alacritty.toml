@@ -1,5 +1,5 @@
 [colors.primary]
-background = '#0d001a'
+background = '#000000'
 foreground = '#c3e600'
 
 [colors.normal]
@@ -35,7 +35,7 @@ index = 17
 color = '#ff5d62'
 
 [window]
-opacity = 0.85
+opacity = 0.00
 blur = true
 
 [font]
