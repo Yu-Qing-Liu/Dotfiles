@@ -1,7 +1,7 @@
 -- JDTLS (Java LSP) configuration
 local jdtls = require('jdtls')
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local workspace_dir = vim.env.HOME .. '/Libs/jdtls-workspace/' .. project_name
+local workspace_dir = vim.env.HOME .. '/.jdtls-workspace/' .. project_name
 local java_home = os.getenv("JAVA_HOME")
 
 -- Needed for debugging
