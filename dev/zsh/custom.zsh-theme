@@ -47,7 +47,7 @@ git_is_dirty() {
 # PS1
 PS1='$(venv=$(venv_name); dirty=$(git_is_dirty); branch=$(git_current_branch); path=$(get_rel_path); \
 if [ -n "${branch}" ]; then echo "${magenta}┌─╸${green}󱩊 %n${reset}@${green}%m${magenta} ━ ${venv}${white} ${branch}*${dirty}${magenta} ━ ${black}󰝰 %~${magenta} "; \
-else echo "${magenta}┌─╸${green}󱩊 %n${reset}@${greem}%m${magenta} ━ ${venv}${black}󰝰 %~${magenta} "; fi)
+else echo "${magenta}┌─╸${green}󱩊 %n${reset}@${green}%m${magenta} ━ ${venv}${black}󰝰 %~${magenta} "; fi)
 └──╸${reset}%B$%b${reset} '
 # PS2
 PS2=' %B~%b '
