@@ -34,6 +34,7 @@
     xorg.xhost
     openssl
     doxygen
+    psmisc
     # Applications
     zsh
     firefox
