@@ -37,6 +37,7 @@
     doxygen
     psmisc
     # Applications
+    gparted
     zsh
     firefox
     alacritty
