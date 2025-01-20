@@ -37,6 +37,7 @@
     doxygen
     psmisc
     # Applications
+    linux-router
     gparted
     zsh
     firefox
