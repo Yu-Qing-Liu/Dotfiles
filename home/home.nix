@@ -41,7 +41,6 @@
     gparted
     zsh
     firefox
-    zoom-us
     alacritty
     ranger
     git
