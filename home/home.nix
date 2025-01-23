@@ -9,6 +9,7 @@
     ./zsh
     ./vivid
     ./ranger
+    ./zoom-us
   ];
 
   home = {
