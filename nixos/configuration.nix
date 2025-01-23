@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, zoomPkgs, ... }:
 {
   imports =
     [
@@ -71,6 +71,7 @@
     docker
     docker-buildx
     nvidia-docker
+    zoomPkgs.zoom-us
   ];
   
   # App settings
