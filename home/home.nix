@@ -70,7 +70,8 @@
     tree-sitter
     gnumake
     gcc
-    # Programming languages
+    # Programming
+    yarn
     rustup
     python313
   ]);
