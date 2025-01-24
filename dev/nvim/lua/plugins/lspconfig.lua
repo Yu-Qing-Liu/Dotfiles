@@ -81,7 +81,7 @@ return {
     }
 
     -- Rust LSP Settings
-    lspconfig.clangd.setup {
+    lspconfig.rust_analyzer.setup {
       cmd = {
         "rust-analyzer",
       }
