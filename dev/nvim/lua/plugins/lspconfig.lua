@@ -80,6 +80,13 @@ return {
       }
     }
 
+    -- Rust LSP Settings
+    lspconfig.clangd.setup {
+      cmd = {
+        "rust-analyzer",
+      }
+    }
+
     -- Dart LSP settings
     lspconfig.dartls.setup {
       capabilities = lsp_capabilities,
