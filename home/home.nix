@@ -73,6 +73,7 @@
     # Programming
     yarn
     rustup
+    rust-analyzer
     python313
   ]);
 
