@@ -22,7 +22,7 @@
     };
   in {
   nixosConfigurations = {
-    yuqingliu = lib.nixosSystem {
+    yql = lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs zoomPkgs; };
         modules = [
