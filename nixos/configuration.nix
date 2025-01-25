@@ -10,7 +10,7 @@
   boot.loader.systemd-boot.configurationLimit = 1;
   
   # Network
-  networking.hostName = "yuqingliu";
+  networking.hostName = "yql";
   networking.wireless.iwd.enable = true;
   # networking.proxy.httpsProxy = "http:127.0.0.1:3128";
   # networking.proxy.httpProxy = "http:127.0.0.1:3129";
