@@ -54,6 +54,7 @@
     # Hypr
     hyprlock
     hyprpaper
+    hyprshot
     # Fonts
     noto-fonts
     nerd-fonts.noto
