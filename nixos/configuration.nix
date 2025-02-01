@@ -38,8 +38,7 @@
   # Timezone
   time.timeZone = "America/Toronto";
 
-
-  #NvidiaConfig
+  # Nvidia Config
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
@@ -59,11 +58,12 @@
 
   # add /.local to $PATH
   environment.variables={
-   NIXOS_OZONE_WL = "1";
-   PATH = [
-     "\${HOME}/.local/bin"
-   ];
-   NIXPKGS_ALLOW_UNFREE = "1";
+    NIXOS_OZONE_WL = "1";
+    PATH = [
+      "\${HOME}/.local/bin"
+    ];
+    NIXPKGS_ALLOW_UNFREE = "1";
+    NIXPKGS_ALLOW_BROKEN = "1";
   };
   
   # System packages
