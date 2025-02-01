@@ -37,6 +37,7 @@
     doxygen
     psmisc
     # Applications
+    imv
     gparted
     zsh
     firefox
