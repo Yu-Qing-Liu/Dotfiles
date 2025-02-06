@@ -16,6 +16,7 @@
       n = "nvim $1";
       r = "ranger-cd";
       ranger = "ranger-cd";
+      toggle_kb = "toggle-kb";
     };
 
     initExtra = builtins.readFile ../../dev/zsh/zshrc.zsh;

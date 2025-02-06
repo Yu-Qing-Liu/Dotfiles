@@ -12,7 +12,16 @@ function ranger-cd() {
     temp_file="$(mktemp -t "ranger_cd.XXXXXXXXXX")"
     ranger --choosedir="$temp_file" -- "${@:-$PWD}"
     if chosen_dir="$(cat -- "$temp_file")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
-    cd -- "$chosen_dir"
+        cd -- "$chosen_dir"
     fi
     rm -f -- "$temp_file"
+}
+
+function toggle-kb() {
+    layout=$(hyprctl getoption input:kb_layout)
+    if [[ "$layout" == *"ca"* ]]; then
+        hyprctl keyword input:kb_layout us
+    else
+        hyprctl keyword input:kb_layout ca
+    fi
 }

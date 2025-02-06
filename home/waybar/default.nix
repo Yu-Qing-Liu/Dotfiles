@@ -82,11 +82,11 @@
         };
         "custom/keyboard-icon" = {
           "format" = "";
-          "on-click" = "/home/admin/.config/waybar/keyboard/toggle_keyboard_layout.sh";
+          "on-click" = "toggle_kb";
         };
         "hyprland/language" = {
           "format" = "{short}";
-          "on-click" = "/home/admin/.config/waybar/keyboard/toggle_keyboard_layout.sh";
+          "on-click" = "toggle_kb";
         };
         "battery" = {
           "format" = "{icon}";
