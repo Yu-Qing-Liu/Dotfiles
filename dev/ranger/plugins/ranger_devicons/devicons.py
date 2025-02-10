@@ -14,7 +14,7 @@ xdgs_dirs = {
     for key, icon in (
         ('XDG_DOCUMENTS_DIR', ''),
         ('XDG_DOWNLOAD_DIR', ''),
-        ('XDG_CONFIG_DIR', ''),
+        ('XDG_CONFIG_DIR', ''),
         ('XDG_MUSIC_DIR', ''),
         ('XDG_PICTURES_DIR', ''),
         ('XDG_PUBLICSHARE_DIR', ''),
@@ -257,10 +257,11 @@ file_node_extensions = {
 dir_node_exact_matches = {
 # English
     '.git'                             : '',
+    'Repositories'                     : '',
     'Desktop'                          : '',
     'Documents'                        : '',
     'Downloads'                        : '',
-    'Dotfiles'                         : '',
+    'Dotfiles'                         : '',
     'Dropbox'                          : '',
     'Music'                            : '',
     'Pictures'                         : '',
