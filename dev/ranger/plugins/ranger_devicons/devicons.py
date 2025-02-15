@@ -258,6 +258,7 @@ dir_node_exact_matches = {
 # English
     '.git'                             : '',
     'Repositories'                     : '',
+    'Containers'                       : '',
     'Desktop'                          : '',
     'Documents'                        : '',
     'Downloads'                        : '',
