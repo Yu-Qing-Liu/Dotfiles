@@ -75,7 +75,10 @@
     # Programming
     yarn
     rustup
-    python313
+    python312
+    python312Packages.numpy
+    python312Packages.pycocotools
+    python312Packages.opencv4
   ]);
 
   fonts = {
