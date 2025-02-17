@@ -57,7 +57,7 @@
   };
 
   # add /.local to $PATH
-  environment.variables={
+  environment.variables = {
     NIXOS_OZONE_WL = "1";
     PATH = [
       "\${HOME}/.local/bin"
@@ -65,7 +65,7 @@
     NIXPKGS_ALLOW_UNFREE = "1";
     NIXPKGS_ALLOW_BROKEN = "1";
   };
-  
+
   # System packages
   environment.systemPackages = with pkgs; [
     libevdev
@@ -86,6 +86,13 @@
   programs.java = {
     enable = true;
     package = pkgs.jdk21;
+  };
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib
+    ];
   };
   
   hardware.nvidia-container-toolkit.enable = true;

@@ -70,15 +70,20 @@
     zathura
     texliveFull
     tree-sitter
-    gnumake
-    gcc
     # Programming
+    # Web
     yarn
+    # Rust
     rustup
-    python312
-    python312Packages.numpy
-    python312Packages.pycocotools
-    python312Packages.opencv4
+    # Python
+    python312Packages.python
+    python312Packages.pip
+    # c / c++
+    gcc
+    libgcc
+    gnumake
+    cmake
+    extra-cmake-modules
   ]);
 
   fonts = {
