@@ -71,6 +71,7 @@
     texliveFull
     tree-sitter
     # Programming
+    protobuf
     # Web
     yarn
     # Rust
