@@ -88,13 +88,6 @@
     package = pkgs.jdk21;
   };
 
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      stdenv.cc.cc.lib
-    ];
-  };
-  
   hardware.nvidia-container-toolkit.enable = true;
   virtualisation.docker.enable = true;
   
