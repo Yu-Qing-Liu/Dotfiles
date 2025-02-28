@@ -38,7 +38,6 @@
     psmisc
     minicom
     # Applications
-    avahi
     imv
     gparted
     zsh

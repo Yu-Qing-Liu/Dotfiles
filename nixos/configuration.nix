@@ -15,6 +15,7 @@
   # networking.proxy.httpsProxy = "http:127.0.0.1:3128";
   # networking.proxy.httpProxy = "http:127.0.0.1:3129";
   services.openssh.settings.PasswordAuthentication = true;
+  services.avahi.enable = true;
   services.openssh.enable = true;
 
   # Bluetooth
