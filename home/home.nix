@@ -21,6 +21,8 @@
     alsa-lib
     sof-firmware
     # Commands
+    sshpass
+    unrar
     util-linux
     lazygit
     neofetch
@@ -38,6 +40,7 @@
     psmisc
     minicom
     # Applications
+    blender
     imv
     gparted
     zsh
