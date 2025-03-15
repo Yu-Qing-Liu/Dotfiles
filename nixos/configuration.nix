@@ -14,6 +14,16 @@
   networking.wireless.iwd.enable = true;
   # networking.proxy.httpsProxy = "http:127.0.0.1:3128";
   # networking.proxy.httpProxy = "http:127.0.0.1:3129";
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 80 443 8070 49153 ];
+    allowedUDPPortRanges = [
+      { from = 4000; to = 4007; }
+      { from = 8000; to = 8010; }
+      { from = 49153; to = 49154; }
+    ];
+  };
+
   services.openssh.settings.PasswordAuthentication = true;
   services.avahi.enable = true;
   services.openssh.enable = true;

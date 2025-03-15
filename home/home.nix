@@ -74,21 +74,6 @@
     zathura
     texliveFull
     tree-sitter
-    # Programming
-    protobuf
-    # Web
-    yarn
-    # Rust
-    rustup
-    # Python
-    python312Packages.python
-    python312Packages.pip
-    # c / c++
-    gcc
-    libgcc
-    gnumake
-    cmake
-    extra-cmake-modules
   ]);
 
   fonts = {
