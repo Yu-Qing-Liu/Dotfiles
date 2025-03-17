@@ -22,6 +22,7 @@
     alsa-lib
     sof-firmware
     # Commands
+    nix-prefetch-github
     sshpass
     unrar
     util-linux
@@ -42,6 +43,7 @@
     minicom
     # Applications
     blender
+    google-chrome
     imv
     gparted
     zsh
