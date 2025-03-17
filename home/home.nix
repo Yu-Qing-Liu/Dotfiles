@@ -47,7 +47,6 @@
     imv
     gparted
     zsh
-    firefox
     alacritty
     ranger
     git
