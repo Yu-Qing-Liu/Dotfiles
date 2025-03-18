@@ -40,7 +40,7 @@ opacity = 0.00
 blur = true
 
 [font]
-size = 16
+size = 11
 
 [keyboard]
 bindings = [

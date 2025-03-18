@@ -2,7 +2,8 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 9px;
+    min-height: 0;
 }
 
 window#waybar.bar1 {
@@ -10,25 +11,79 @@ window#waybar.bar1 {
 }
 
 #workspaces button {
-    padding: 0 16px 0 16px;
-    margin: 0 4px 0 0;
+    padding: 0 7px 0 7px;
+    margin: 0 3px 0 0;
     outline: 0;
     color: #ffffff;
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: rgba(0,0,0,0.85);
     border: solid 1px rgba(255,255,255,0.4);
 }
 
 #workspaces button.active {
-    padding: 0 28px 0 28px;
+    padding: 0 12px 0 12px;
     color: #ffa500;
     border: solid 1px #ffa500;
 }
 
+#custom-cpu-icon {
+    color: #ffa500;
+    font-size: 10px;
+    padding: 0 5px 0 10px;
+    background-color:rgba(255,255,255,0.15);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#cpu {
+    color: #ffffff;
+    padding: 0 7px 0 0;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#custom-memory-icon {
+    color: #ffa500;
+    font-size: 9px;
+    padding: 1px 3px 0 0;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#memory {
+    color: #ffffff;
+    padding: 0 4px 0 0;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#custom-disk-icon {
+    color: #ffa500;
+    font-size: 8px;
+    padding: 1px 4px 0px 2px;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#disk {
+    color: #ffffff;
+    padding: 0 1px 0 0;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#custom-audio-icon {
+    color:#ffa500;
+    padding: 0 6px 0 4px;
+    font-size: 9px;
+    background-color:rgba(255,255,255,0.15);
+}
+
+#wireplumber {
+    color: #ffffff;
+    padding: 0 0 0 2px;
+    background-color:rgba(255,255,255,0.15);
+}
+
 #custom-keyboard-icon {
     color:#ffa500;
-    font-size: 14px;
-    padding: 0 10px 0 8px;
+    font-size: 9px;
+    padding: 0 7px 0 5px;
     background-color:rgba(255,255,255,0.15);
 }
 
@@ -40,80 +95,21 @@ window#waybar.bar1 {
 
 #battery {
     color: #ffffff;
-    font-size: 16px;
-    padding: 0 16px 0 10px;
+    font-size: 10px;
+    padding: 1px 10px 0 6px;
     background-color:rgba(255,255,255,0.15);
 }
 
 #bluetooth {
     color: #0082FC;
-    font-size: 18px;
-    padding: 0 8px 0 0px;
+    font-size: 12px;
+    padding: 0 4px 0 0px;
     background-color:rgba(255,255,255,0.15);
 }
 
 #custom-network {
     color: #ffffff;
-    font-size: 19px;
-    padding: 0 24px 0 0;
-    background-color:rgba(255,255,255,0.15);
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-#custom-cpu-icon {
-    color: #ffa500;
-    font-size: 16px;
-    padding: 0 8px 0 16px;
-    background-color:rgba(255,255,255,0.15);
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-}
-
-#cpu {
-    color: #ffffff;
-    padding: 0 10px 0 0;
-    background-color:rgba(255,255,255,0.15);
-}
-
-#custom-memory-icon {
-    color: #ffa500;
-    font-size: 14px;
-    padding: 0 4px 0 0;
-    background-color:rgba(255,255,255,0.15);
-}
-
-#memory {
-    color: #ffffff;
-    padding: 0 8px 0 0;
-    background-color:rgba(255,255,255,0.15);
-}
-
-#custom-disk-icon {
-    color: #ffa500;
-    font-size: 14px;
-    padding: 0 8px 0 0;
-    background-color:rgba(255,255,255,0.15);
-}
-
-#disk {
-    color: #ffffff;
-    padding: 0 0 0 0;
-    background-color:rgba(255,255,255,0.15);
-}
-
-#custom-clock-icon {
-    margin-left: 25px;
-    color: #ffa500;
-    font-size: 16px;
-    padding: 0 10px 0 16px;
-    background-color:rgba(255,255,255,0.15);
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-}
-
-#clock {
-    color: #ffffff;
+    font-size: 12px;
     padding: 0 16px 0 0;
     background-color:rgba(255,255,255,0.15);
     border-top-right-radius: 12px;
@@ -121,10 +117,10 @@ window#waybar.bar1 {
 }
 
 #custom-date-icon {
-    margin-left: 25px;
+    margin-left: 10px;
     color: #ffa500;
-    font-size: 16px;
-    padding: 0 10px 0 16px;
+    font-size: 10px;
+    padding: 0 5px 0 10px;
     background-color:rgba(255,255,255,0.15);
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
@@ -132,29 +128,34 @@ window#waybar.bar1 {
 
 #custom-date {
     color: #ffffff;
-    padding: 0 16px 0 0;
+    padding: 0 10px 0 0;
+    background-color:rgba(255,255,255,0.15);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#custom-clock-icon {
+    margin-left: 10px;
+    color: #ffa500;
+    font-size: 10px;
+    padding: 1px 7px 0 10px;
+    background-color:rgba(255,255,255,0.15);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#clock {
+    color: #ffffff;
+    padding: 0 10px 0 0;
     background-color:rgba(255,255,255,0.15);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
 
 #custom-power {
-    margin-left: 25px;
+    margin-left: 10px;
     color: #ffffff;
-    padding: 0px 5px 0 10px;
+    padding: 1px 5px 0 7px;
     background-color:rgba(255,255,255,0.15);
     border-radius: 12px;
-}
-
-#custom-audio-icon {
-    color:#ffa500;
-    padding: 0 8px 0 8px;
-    font-size: 14px;
-    background-color:rgba(255,255,255,0.15);
-}
-
-#wireplumber {
-    color: #ffffff;
-    padding: 0 0 0 4px;
-    background-color:rgba(255,255,255,0.15);
 }
