@@ -15,7 +15,7 @@
           "DP-1"
           "DP-2"
         ];
-        "margin" = "4px 6px 0px 6px";
+        "margin" = "7px 6px 0px 6px";
         "layer" = "bottom";
         "position" = "top";
         "modules-left" = [
