@@ -117,7 +117,6 @@
         "clock" = {
           "interval" = 60;
           "format" = "{:%I:%M %p}";
-          "max-length" = 25;
         };
         "custom/date-icon" = {
           "format" = "";
