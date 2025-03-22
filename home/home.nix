@@ -42,6 +42,7 @@
     psmisc
     minicom
     # Applications
+    unityhub
     blender
     google-chrome
     imv

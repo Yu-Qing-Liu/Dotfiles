@@ -32,7 +32,7 @@ function venv_name() {
 
 function nix_shell() {
   if [[ -n $IN_NIX_SHELL ]]; then
-    echo -n "${blue}󱄅 nix-shell${magenta} ━ "
+    echo -n "${blue}󱄅 flake${magenta} ━ "
   else
     echo -n ""
   fi
