@@ -30,6 +30,14 @@ function venv_name() {
   fi
 }
 
+function nix_shell() {
+  if [[ -n $IN_NIX_SHELL ]]; then
+    echo -n "${blue}󱄅 nix-shell${magenta} ━ "
+  else
+    echo -n ""
+  fi
+}
+
 # Check if there are any uncommitted changes
 git_is_dirty() {
   local root=$(git rev-parse --show-toplevel 2> /dev/null)
@@ -45,9 +53,9 @@ git_is_dirty() {
 }
 
 # PS1
-PS1='$(venv=$(venv_name); dirty=$(git_is_dirty); branch=$(git_current_branch); path=$(get_rel_path); \
-if [ -n "${branch}" ]; then echo "${magenta}┌─╸${green}󱩊 %n${reset}@${green}%m${magenta} ━ ${venv}${white} ${branch}*${dirty}${magenta} ━ ${black}󰝰 %~${magenta} "; \
-else echo "${magenta}┌─╸${green}󱩊 %n${reset}@${green}%m${magenta} ━ ${venv}${black}󰝰 %~${magenta} "; fi)
+PS1='$(venv=$(venv_name); dirty=$(git_is_dirty); nix=$(nix_shell); branch=$(git_current_branch); path=$(get_rel_path); \
+if [ -n "${branch}" ]; then echo "${magenta}┌─╸${green}󱩊 %n${reset}@${green}%m${magenta} ━ ${venv}${nix}${white} ${branch}*${dirty}${magenta} ━ ${black}󰝰 %~${magenta} "; \
+else echo "${magenta}┌─╸${green}󱩊 %n${reset}@${green}%m${magenta} ━ ${venv}${nix}${black}󰝰 %~${magenta} "; fi)
 └──╸${reset}%B$%b${reset} '
 # PS2
 PS2=' %B~%b '

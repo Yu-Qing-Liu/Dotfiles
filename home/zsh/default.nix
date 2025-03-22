@@ -17,6 +17,8 @@
       r = "ranger-cd";
       ranger = "ranger-cd";
       toggle_kb = "toggle-kb";
+      dev = "nix develop --impure -c $SHELL";
+      l = "lazygit";
     };
 
     initExtra = builtins.readFile ../../dev/zsh/zshrc.zsh;
