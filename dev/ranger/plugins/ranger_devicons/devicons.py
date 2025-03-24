@@ -273,6 +273,7 @@ dir_node_exact_matches = {
     'go'                               : '',
     'workspace'                        : '',
     'OneDrive'                         : '',
+    'Unity'                            : '󰚯',
 # Spanish
     'Escritorio'                       : '',
     'Documentos'                       : '',
