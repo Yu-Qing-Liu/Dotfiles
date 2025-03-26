@@ -3,6 +3,11 @@ local opt = vim.opt
 -- Session Management
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
+-- Persistent undo
+opt.undofile = true
+opt.undolevels = 1000
+opt.undoreload = 10000
+
 -- Line Numbers
 opt.relativenumber = true
 opt.number = true
@@ -17,7 +22,7 @@ vim.bo.softtabstop = 4
 vim.cmd([[
   augroup FiletypeSettings
     autocmd!
-    autocmd FileType dart,lua,html,javascript,typescriptreact,nix,html,txt setlocal tabstop=2 shiftwidth=2
+    autocmd FileType dart,lua,html,xml,launch,javascript,typescript,react,nix,text,cmake setlocal tabstop=2 shiftwidth=2 softtabstop=2
   augroup END
 ]])
 
