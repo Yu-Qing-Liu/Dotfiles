@@ -27,7 +27,7 @@ vim.cmd([[
 ]])
 
 -- Cursor Line
-opt.cursorline = false
+opt.cursorline = true
 
 -- Line Wrapping
 opt.wrap = false

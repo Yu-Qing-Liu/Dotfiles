@@ -1,4 +1,5 @@
 -- Status line
+local git_blame = require('gitblame')
 return {
   -- https://github.com/nvim-lualine/lualine.nvim
   'nvim-lualine/lualine.nvim',
@@ -16,20 +17,16 @@ return {
     sections = {
       lualine_c = {
         {
-          -- Customize the filename part of lualine to be parent/filename
           'filename',
           file_status = true,      -- Displays file status (readonly status, modified status)
           newfile_status = false,  -- Display new file status (new file means no write after created)
-          path = 4,                -- 0: Just the filename
-                                   -- 1: Relative path
-                                   -- 2: Absolute path
-                                   -- 3: Absolute path, with tilde as the home directory
-                                   -- 4: Filename and parent dir, with tilde as the home directory
+          path = 4,
           symbols = {
             modified = '[+]',      -- Text to show when the file is modified.
             readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
           }
-        }
+        },
+        { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available }
       }
     }
   }
