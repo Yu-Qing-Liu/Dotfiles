@@ -3,6 +3,20 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+-- Disable arrow keys crutch
+keymap.set('n', '<Up>', '<Nop>')
+keymap.set('n', '<Down>', '<Nop>')
+keymap.set('n', '<Left>', '<Nop>')
+keymap.set('n', '<Right>', '<Nop>')
+keymap.set('i', '<Up>', '<Nop>')
+keymap.set('i', '<Down>', '<Nop>')
+keymap.set('i', '<Left>', '<Nop>')
+keymap.set('i', '<Right>', '<Nop>')
+keymap.set('v', '<Up>', '<Nop>')
+keymap.set('v', '<Down>', '<Nop>')
+keymap.set('v', '<Left>', '<Nop>')
+keymap.set('v', '<Right>', '<Nop>')
+
 -- General keymaps
 keymap.set("i", "jk", "<ESC>") -- exit insert mode with jk 
 keymap.set("i", "ii", "<ESC>") -- exit insert mode with ii

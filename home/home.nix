@@ -77,6 +77,7 @@
     zathura
     texliveFull
     tree-sitter
+    stdenv.cc
   ]);
 
   fonts = {

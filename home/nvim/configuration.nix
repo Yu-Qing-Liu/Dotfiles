@@ -19,6 +19,7 @@
     home.file.".config/nvim/lua/plugins/indent-blankline.lua".source = ../../dev/nvim/lua/plugins/indent-blankline.lua;
     home.file.".config/nvim/lua/plugins/lspconfig.lua".source = ../../dev/nvim/lua/plugins/lspconfig.lua;
     home.file.".config/nvim/lua/plugins/lualine.lua".source = ../../dev/nvim/lua/plugins/lualine.lua;
+    home.file.".config/nvim/lua/plugins/neoscroll.lua".source = ../../dev/nvim/lua/plugins/neoscroll.lua;
     home.file.".config/nvim/lua/plugins/nvim-autopairs.lua".source = ../../dev/nvim/lua/plugins/nvim-autopairs.lua;
     home.file.".config/nvim/lua/plugins/nvim-cmp.lua".source = ../../dev/nvim/lua/plugins/nvim-cmp.lua;
     home.file.".config/nvim/lua/plugins/nvim-colorizer.lua".source = ../../dev/nvim/lua/plugins/nvim-colorizer.lua;
