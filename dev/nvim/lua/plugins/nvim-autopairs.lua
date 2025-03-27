@@ -18,11 +18,11 @@ return {
     local Rule = require('nvim-autopairs.rule')
     npairs.add_rules({
       Rule("$", "$", "tex") -- Adds $$ pair for tex files
----@diagnostic disable-next-line: redefined-local
-        :with_pair(function(opts)
-          local pair = opts.line:sub(opts.col - 1, opts.col)
-          return pair ~= "$$" -- Avoid auto-inserting multiple $
-        end),
+    ---@diagnostic disable-next-line: redefined-local
+      :with_pair(function(opts)
+        local pair = opts.line:sub(opts.col - 1, opts.col)
+        return pair ~= "$$" -- Avoid auto-inserting multiple $
+      end),
     })
   end
 }
