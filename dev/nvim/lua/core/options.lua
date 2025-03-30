@@ -3,11 +3,6 @@ local opt = vim.opt
 -- Session Management
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
--- Persistent undo
-opt.undofile = true
-opt.undolevels = 1000
-opt.undoreload = 10000
-
 -- Line Numbers
 opt.relativenumber = true
 opt.number = true
@@ -58,7 +53,7 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 -- Mouse Settings
-opt.mouse = "a"
+opt.mouse = ""
 
 -- VimTex
 vim.g.vimtex_quickfix_open_on_warning = 0
