@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, zoomPkgs, ... }:
+{ inputs, config, pkgs, zoomPkgs, blenderPkgs, ... }:
 {
   imports =
     [
@@ -50,7 +50,15 @@
   time.timeZone = "America/Toronto";
 
   # Nvidia Config
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     modesetting.enable = true;

@@ -80,6 +80,11 @@ return {
       }
     }
 
+    -- GLSL LSP Settings
+    lspconfig.glsl_analyzer.setup {
+      filetypes = {"vert", "tesc", ".tese", ".geom", ".frag", ".comp"}
+    }
+
     -- Rust LSP Settings
     lspconfig.rust_analyzer.setup {
       cmd = {

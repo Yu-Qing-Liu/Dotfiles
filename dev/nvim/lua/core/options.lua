@@ -8,6 +8,18 @@ opt.relativenumber = true
 opt.number = true
 opt.statuscolumn = "%s %l %=%{v:relnum==0 ? '1' : v:relnum + 1} "
 
+-- Filetypes
+vim.filetype.add({
+  extension = {
+    vert = 'glsl',  -- Vertex shader
+    tesc = 'glsl',  -- Tessellation Control shader
+    tese = 'glsl',  -- Tessellation Evaluation shader
+    geom = 'glsl',  -- Geometry shader
+    frag = 'glsl',  -- Fragment shader
+    comp = 'glsl',  -- Compute shader
+  },
+})
+
 -- Tabs & Indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
