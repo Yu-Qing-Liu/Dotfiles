@@ -36,5 +36,4 @@
     home.file.".config/nvim/lua/plugins/vim-maximiser.lua".source = ../../dev/nvim/lua/plugins/vim-maximizer.lua;
     home.file.".config/nvim/lua/plugins/vimtex.lua".source = ../../dev/nvim/lua/plugins/vimtex.lua;
     home.file.".config/nvim/lua/plugins/toggleterm.lua".source = ../../dev/nvim/lua/plugins/toggleterm.lua;
-    home.file.".config/nvim/lua/plugins/clangd_extensions.lua".source = ../../dev/nvim/lua/plugins/clangd_extensions.lua;
 }

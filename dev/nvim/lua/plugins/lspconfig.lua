@@ -21,6 +21,8 @@ return {
     -- Additional lua configuration, makes nvim stuff amazing!
     -- https://github.com/folke/neodev.nvim
     { 'folke/neodev.nvim' },
+
+    { 'hrsh7th/cmp-nvim-lsp'}
   },
   config = function()
     require('mason').setup()
@@ -40,8 +42,7 @@ return {
 
     local lspconfig = require('lspconfig')
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities.textDocument.completion.completionItem.snippetSupport = true
-    local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+    capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     local lsp_attach = function(client, bufnr)
       -- Create your keybindings here...
@@ -62,6 +63,8 @@ return {
 
     -- Lua LSP settings
     lspconfig.lua_ls.setup {
+      on_attach = lsp_attach,
+      capabilities = capabilities,
       cmd = {
         "lua-lsp"
       },
@@ -77,6 +80,8 @@ return {
 
     -- C++ LSP Settings
     lspconfig.clangd.setup {
+      on_attach = lsp_attach,
+      capabilities = capabilities,
       cmd = {
         "clangd",
         "--function-arg-placeholders",
@@ -86,11 +91,15 @@ return {
 
     -- GLSL LSP Settings
     lspconfig.glsl_analyzer.setup {
+      on_attach = lsp_attach,
+      capabilities = capabilities,
       filetypes = {"vert", "tesc", ".tese", ".geom", ".frag", ".comp"}
     }
 
     -- Rust LSP Settings
     lspconfig.rust_analyzer.setup {
+      on_attach = lsp_attach,
+      capabilities = capabilities,
       cmd = {
         "rust-analyzer",
       }
@@ -98,14 +107,15 @@ return {
 
     -- Dart LSP settings
     lspconfig.dartls.setup {
-      capabilities = lsp_capabilities,
+      on_attach = lsp_attach,
+      capabilities = capabilities,
       cmd = { "dart", 'language-server', '--protocol=lsp' },
     }
 
     -- Python LSP settings
     lspconfig.pylsp.setup {
       on_attach = lsp_attach,
-      capabilities = lsp_capabilities,
+      capabilities = capabilities,
       settings = {
         pylsp = {
           plugins = {

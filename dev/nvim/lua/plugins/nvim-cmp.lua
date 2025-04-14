@@ -12,6 +12,7 @@ return {
 
     -- LSP completion capabilities
     -- https://github.com/hrsh7th/cmp-nvim-lsp
+    'neovim/nvim-lspconfig',
     'hrsh7th/cmp-nvim-lsp',
 
     -- Additional user-friendly snippets
@@ -46,7 +47,6 @@ return {
         ['<C-f>'] = cmp.mapping.scroll_docs(4), -- scroll forward
         ['<C-Space>'] = cmp.mapping.complete {}, -- show completion suggestions
         ['<CR>'] = cmp.mapping.confirm {
-          behavior = cmp.ConfirmBehavior.Replace,
           select = true,
         },
 	      -- Tab through suggestions or when a snippet is active, tab to the next argument
