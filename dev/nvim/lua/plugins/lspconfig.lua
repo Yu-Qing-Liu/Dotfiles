@@ -39,7 +39,10 @@ return {
     vim.api.nvim_command('MasonToolsInstall')
 
     local lspconfig = require('lspconfig')
-    local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
     local lsp_attach = function(client, bufnr)
       -- Create your keybindings here...
     end
@@ -76,7 +79,8 @@ return {
     lspconfig.clangd.setup {
       cmd = {
         "clangd",
-        "--fallback-style=llvm"
+        "--function-arg-placeholders",
+        "--fallback-style=llvm",
       }
     }
 
@@ -109,6 +113,7 @@ return {
               maxLineLength = 180,
               ignore = { "E501" },
             },
+            mccabe = { enabled = false },
           },
         },
       },
