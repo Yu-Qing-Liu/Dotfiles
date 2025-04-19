@@ -9,7 +9,6 @@
     home.file.".config/nvim/ftplugin/markdown.lua".source = ../../dev/nvim/ftplugin/markdown.lua;
 
     # Plugins
-    home.file.".config/nvim/lua/plugins/barbecue.lua".source = ../../dev/nvim/lua/plugins/barbecue.lua;
     home.file.".config/nvim/lua/plugins/bigfile.lua".source = ../../dev/nvim/lua/plugins/bigfile.lua;
     home.file.".config/nvim/lua/plugins/bufferline.lua".source = ../../dev/nvim/lua/plugins/bufferline.lua;
     home.file.".config/nvim/lua/plugins/colorscheme.lua".source = ../../dev/nvim/lua/plugins/colorscheme.lua;
