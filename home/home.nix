@@ -78,6 +78,7 @@
     texliveFull
     tree-sitter
     stdenv.cc
+    gnumake
   ]);
 
   fonts = {
