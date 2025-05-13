@@ -93,6 +93,13 @@
     docker-buildx
     nvidia-docker
     zoomPkgs.zoom-us
+    usbutils
+    librealsense
+  ];
+
+  # UDEV
+  services.udev.packages = [
+    pkgs.librealsense
   ];
   
   # App settings
@@ -118,6 +125,8 @@
     extraGroups = [ 
       "wheel"
       "docker"
+      "plugdev"
+      "video"
     ];
     shell = pkgs.zsh;
   };
