@@ -22,6 +22,7 @@
     alsa-lib
     sof-firmware
     # Commands
+    nmap
     nix-prefetch-github
     sshpass
     unrar
