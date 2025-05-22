@@ -21,7 +21,7 @@
       l = "lazygit";
     };
 
-    initExtra = builtins.readFile ../../dev/zsh/zshrc.zsh;
+    initContent = builtins.readFile ../../dev/zsh/zshrc.zsh;
 
     oh-my-zsh = {
       enable = true;

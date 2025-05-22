@@ -72,7 +72,7 @@
     lua51Packages.luarocks
     lua51Packages.lua-lsp
     lua51Packages.lua
-    nodejs_23
+    nodejs_24
     ripgrep
     fd
     zathura
