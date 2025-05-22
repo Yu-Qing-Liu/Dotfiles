@@ -43,6 +43,7 @@
     psmisc
     minicom
     # Applications
+    zenmap
     unityhub
     blender
     google-chrome
