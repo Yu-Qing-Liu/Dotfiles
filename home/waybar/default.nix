@@ -90,7 +90,7 @@
         };
         "battery" = {
           "format" = "{icon}";
-          "format-alt" = "{time} {icon}";
+          "format-alt" = "{icon}";
           "format-alt-click" = "click-right";
           "format-icons" = [
             ""
