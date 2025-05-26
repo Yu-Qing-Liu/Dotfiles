@@ -6,7 +6,7 @@ opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,term
 -- Line Numbers
 opt.number = true
 opt.relativenumber = true
-opt.statuscolumn = "%s %=%{printf('%-4d', v:lnum)} %=%{printf('%-4d', v:relnum + 1)} "
+opt.statuscolumn = "%s %=%{printf('%-4d', v:lnum)} %=%{printf('%-2d', v:relnum + 1)} "
 
 -- Filetypes
 vim.filetype.add({
