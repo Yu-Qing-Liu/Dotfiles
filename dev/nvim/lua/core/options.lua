@@ -4,9 +4,9 @@ local opt = vim.opt
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Line Numbers
-opt.relativenumber = true
 opt.number = true
-opt.statuscolumn = "%s %l %=%{v:relnum==0 ? '1' : v:relnum + 1} "
+opt.relativenumber = true
+opt.statuscolumn = "%s %=%{printf('%-4d', v:lnum)} %=%{printf('%-4d', v:relnum + 1)} "
 
 -- Filetypes
 vim.filetype.add({
