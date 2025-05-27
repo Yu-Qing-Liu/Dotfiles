@@ -257,6 +257,7 @@ file_node_extensions = {
 dir_node_exact_matches = {
 # English
     '.git'                             : '',
+    'Android'                          : '',
     'Repositories'                     : '',
     'Containers'                       : '',
     'Desktop'                          : '',
