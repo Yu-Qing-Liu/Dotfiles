@@ -44,6 +44,7 @@
     minicom
     # Applications
     zenmap
+    genymotion
     unityhub
     blender
     google-chrome
