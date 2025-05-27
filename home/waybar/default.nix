@@ -7,7 +7,7 @@
       };
       style = builtins.readFile ./style.css;
       settings = [{
-        "mode" = "overlay";
+        "mode" = "dock";
         "fixed-center" = false;
         "name" = "bar1";
         "output" = [
@@ -16,7 +16,7 @@
           "DP-2"
         ];
         "margin" = "7px 6px 0px 6px";
-        "layer" = "bottom";
+        "layer" = "top";
         "position" = "top";
         "modules-left" = [
           "hyprland/workspaces"
