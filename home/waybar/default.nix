@@ -110,6 +110,7 @@
         };
         "custom/network" = {
           "format" = "";
+          "on-click" = "alacritty -e impala";
         };
         "custom/clock-icon" = {
           "format" = "";
