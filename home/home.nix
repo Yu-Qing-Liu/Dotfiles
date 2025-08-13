@@ -62,6 +62,7 @@
     obs-studio
     vlc
     libreoffice-qt6
+    impala
     # Hypr
     hyprlock
     hyprpaper
