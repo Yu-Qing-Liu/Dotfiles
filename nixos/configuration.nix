@@ -115,6 +115,11 @@
     package = pkgs.jdk21;
   };
 
+  programs.appimage = {
+    enable = true;   # provides appimage-run
+    binfmt = true;   # register AppImages with binfmt_misc
+  };
+
   programs.nix-ld.enable = true;
 
   hardware.nvidia-container-toolkit.enable = true;
