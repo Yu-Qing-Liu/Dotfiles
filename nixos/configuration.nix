@@ -115,6 +115,8 @@
     package = pkgs.jdk21;
   };
 
+  programs.nix-ld.enable = true;
+
   hardware.nvidia-container-toolkit.enable = true;
   virtualisation.docker.enable = true;
   
