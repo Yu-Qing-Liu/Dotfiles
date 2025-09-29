@@ -5,7 +5,7 @@
   programs.zsh = {
     enable = true;
     autocd = true;
-    dotDir = ".config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
     autosuggestion.enable = true;
     enableCompletion = true;
 
@@ -25,7 +25,7 @@
 
     oh-my-zsh = {
       enable = true;
-      custom = "${config.home.homeDirectory}/.oh-my-zsh/custom";
+      custom = "${config.xdg.configHome}/.oh-my-zsh/custom";
       theme = "custom";
       plugins = [
         "command-not-found"

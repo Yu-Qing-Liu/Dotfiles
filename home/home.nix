@@ -22,6 +22,7 @@
     alsa-lib
     sof-firmware
     # Commands
+    file
     nmap
     nix-prefetch-github
     sshpass
@@ -58,7 +59,7 @@
     wl-clipboard
     pavucontrol
     prismlauncher
-    rofi-wayland
+    rofi
     wtype
     obs-studio
     vlc
