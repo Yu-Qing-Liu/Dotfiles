@@ -1,15 +1,15 @@
 { config, ... }:
 {
-  home.file.".oh-my-zsh/custom/themes/custom.zsh-theme".text = builtins.readFile ../../dev/zsh/custom.zsh-theme;
-  # Enable Zsh
+  xdg.enable = true;
+
   programs.zsh = {
     enable = true;
     autocd = true;
+    # Absolute path via XDG:
     dotDir = "${config.xdg.configHome}/zsh";
     autosuggestion.enable = true;
     enableCompletion = true;
 
-    # Set custom aliases
     shellAliases = {
       ls = "ls --color=auto";
       grep = "grep --color=auto";
@@ -25,19 +25,18 @@
 
     oh-my-zsh = {
       enable = true;
-      custom = "${config.xdg.configHome}/.oh-my-zsh/custom";
+      custom = "${config.home.homeDirectory}/.oh-my-zsh/custom";
       theme = "custom";
-      plugins = [
-        "command-not-found"
-        "git"
-        "history"
-        "sudo"
-      ];
+      plugins = [ "command-not-found" "git" "history" "sudo" ];
     };
   };
+
+  home.file.".oh-my-zsh/custom/themes/custom.zsh-theme".text =
+    builtins.readFile ../../dev/zsh/custom.zsh-theme;
 
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
   };
 }
+
