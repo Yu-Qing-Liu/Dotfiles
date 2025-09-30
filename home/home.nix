@@ -85,6 +85,7 @@
     tree-sitter
     stdenv.cc
     gnumake
+    cargo
   ]);
 
   fonts = {
