@@ -21,8 +21,7 @@ return {
     -- Additional lua configuration, makes nvim stuff amazing!
     -- https://github.com/folke/neodev.nvim
     { 'folke/neodev.nvim' },
-
-    { 'hrsh7th/cmp-nvim-lsp' }
+    { 'hrsh7th/cmp-nvim-lsp' },
   },
   config = function()
     require('mason').setup()
@@ -91,19 +90,6 @@ return {
       -- Create your keybindings here...
     end
 
-    -- Call setup on each LSP server
-    -- require('mason-lspconfig').setup_handlers({
-    --   function(server_name)
-    --     -- Don't call setup for JDTLS Java LSP because it will be setup from a separate config
-    --     if server_name ~= 'jdtls' then
-    --       lspconfig[server_name].setup({
-    --         on_attach = lsp_attach,
-    --         capabilities = lsp_capabilities,
-    --       })
-    --     end
-    --   end
-    -- })
-
     -- Lua LSP settings
     lspconfig.lua_ls.setup {
       on_attach = lsp_attach,
@@ -119,6 +105,25 @@ return {
           },
         },
       },
+    }
+
+    -- CMake Setup
+    lspconfig.neocmake.setup {
+      on_attach = lsp_attach,
+      capabilities = capabilities,
+      cmd = { "neocmakelsp", "--stdio" },
+      filetypes = { "cmake" },
+      single_file_support = true,
+      init_options = {
+        format = {
+          enable = true
+        },
+        lint = {
+          enable = true
+        },
+        scan_cmake_in_package = true
+      }
+
     }
 
     -- C++ LSP Settings
