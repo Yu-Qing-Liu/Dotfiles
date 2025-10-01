@@ -22,7 +22,7 @@ return {
     -- https://github.com/folke/neodev.nvim
     { 'folke/neodev.nvim' },
 
-    { 'hrsh7th/cmp-nvim-lsp'}
+    { 'hrsh7th/cmp-nvim-lsp' }
   },
   config = function()
     require('mason').setup()
@@ -39,6 +39,49 @@ return {
     -- There is an issue with mason-tools-installer running with VeryLazy, since it triggers on VimEnter which has already occurred prior to this plugin loading so we need to call install explicitly
     -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim/issues/39
     vim.api.nvim_command('MasonToolsInstall')
+
+    -- Configure diagnostics to show at end of line
+    vim.diagnostic.config({
+      virtual_text = {
+        prefix = function(diagnostic)
+          local icons = {
+            [vim.diagnostic.severity.ERROR] = ' ',
+            [vim.diagnostic.severity.WARN] = ' ',
+            [vim.diagnostic.severity.INFO] = ' ',
+            [vim.diagnostic.severity.HINT] = '󰌵 ',
+          }
+          return icons[diagnostic.severity] or ''
+        end,
+        severity = {
+          min = vim.diagnostic.severity.HINT,
+        }
+      },
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = " E",
+          [vim.diagnostic.severity.WARN] = " W",
+          [vim.diagnostic.severity.INFO] = " I",
+          [vim.diagnostic.severity.HINT] = " H",
+        },
+      },
+      underline = true,         -- Underline the problematic code
+      update_in_insert = false, -- Don't update diagnostics in insert mode
+      severity_sort = true,     -- Sort diagnostics by severity
+    })
+
+    vim.cmd([[
+      " Link to existing highlight groups for better theme integration
+      highlight link DiagnosticError Error
+      highlight link DiagnosticWarn WarningMsg
+      highlight link DiagnosticInfo Info
+      highlight link DiagnosticHint Question
+
+      " Virtual text with subtle backgrounds
+      highlight DiagnosticVirtualTextError guifg=red guibg=NONE
+      highlight DiagnosticVirtualTextWarn guifg=orange guibg=NONE
+      highlight DiagnosticVirtualTextInfo guifg=lightblue guibg=NONE
+      highlight DiagnosticVirtualTextHint guifg=lightgreen guibg=NONE
+    ]])
 
     local lspconfig = require('lspconfig')
     local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -104,7 +147,7 @@ return {
     lspconfig.glsl_analyzer.setup {
       on_attach = lsp_attach,
       capabilities = capabilities,
-      filetypes = {"vert", "tesc", ".tese", ".geom", ".frag", ".comp"}
+      filetypes = { ".vert", ".tesc", ".tese", ".geom", ".frag", ".comp" }
     }
 
     -- Rust LSP Settings
