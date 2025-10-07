@@ -21,6 +21,7 @@
     # Firmware
     alsa-lib
     sof-firmware
+    hplip
     # Commands
     file
     nmap
