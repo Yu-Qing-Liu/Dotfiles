@@ -46,6 +46,13 @@
   # Configure console keymap
   console.keyMap = "us";
   i18n.defaultLocale = "en_US.UTF-8";
+
+  # Printers
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [ hplip ];
+    webInterface = true;
+  };
   
   # Timezone
   time.timeZone = "America/Toronto";
