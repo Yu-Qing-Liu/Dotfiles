@@ -13,11 +13,6 @@
       "margin" = "7px 6px 0px 6px";
       "layer" = "top";
       "position" = "top";
-      "output" = [
-        "eDP-1"
-        "DP-5"
-        "DP-6"
-      ];
       "modules-left" = [ "hyprland/workspaces" ];
       "modules-right" = [
         "custom/cpu-icon"
