@@ -1,14 +1,10 @@
-{ inputs, config, pkgs, zoomPkgs, blenderPkgs, ... }:
-{
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+{ inputs, config, pkgs, zoomPkgs, blenderPkgs, ... }: {
+  imports = [ ./hardware-configuration.nix ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 1;
-  
+
   # Network
   networking.hostName = "yql";
   # networking.networkmanager.enable = true;
@@ -19,9 +15,18 @@
     enable = true;
     allowedTCPPorts = [ 80 443 8070 49153 ];
     allowedUDPPortRanges = [
-      { from = 4000; to = 4007; }
-      { from = 8000; to = 8010; }
-      { from = 49153; to = 49154; }
+      {
+        from = 4000;
+        to = 4007;
+      }
+      {
+        from = 8000;
+        to = 8010;
+      }
+      {
+        from = 49153;
+        to = 49154;
+      }
     ];
   };
 
@@ -68,7 +73,7 @@
     drivers = with pkgs; [ hplip ];
     webInterface = true;
   };
-  
+
   # Timezone
   time.timeZone = "America/Toronto";
 
@@ -76,13 +81,9 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-      vaapiVdpau
-      libvdpau-va-gl
-    ];
+    extraPackages = with pkgs; [ intel-media-driver vaapiVdpau libvdpau-va-gl ];
   };
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" "displaylink" ];
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
@@ -101,15 +102,14 @@
   # add /.local to $PATH
   environment.variables = {
     NIXOS_OZONE_WL = "1";
-    PATH = [
-      "\${HOME}/.local/bin"
-    ];
+    PATH = [ "\${HOME}/.local/bin" ];
     NIXPKGS_ALLOW_UNFREE = "1";
     NIXPKGS_ALLOW_BROKEN = "1";
   };
 
   # System packages
   environment.systemPackages = with pkgs; [
+    displaylink
     libevdev
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     docker
@@ -120,11 +120,17 @@
     librealsense
   ];
 
+  boot = {
+    extraModulePackages = [ config.boot.kernelPackages.evdi ];
+    initrd = {
+      # List of modules that are always loaded by the initrd.
+      kernelModules = [ "evdi" ];
+    };
+  };
+
   # UDEV
-  services.udev.packages = [
-    pkgs.librealsense
-  ];
-  
+  services.udev.packages = [ pkgs.librealsense ];
+
   # App settings
   programs.hyprland = {
     enable = true;
@@ -138,33 +144,31 @@
   };
 
   programs.appimage = {
-    enable = true;   # provides appimage-run
-    binfmt = true;   # register AppImages with binfmt_misc
+    enable = true; # provides appimage-run
+    binfmt = true; # register AppImages with binfmt_misc
   };
 
   programs.nix-ld.enable = true;
 
   hardware.nvidia-container-toolkit.enable = true;
   virtualisation.docker.enable = true;
-  
+
   # Users
   programs.zsh.enable = true;
   users.users.admin = {
     isNormalUser = true;
     description = "admin";
-    extraGroups = [ 
-      "wheel"
-      "docker"
-      "plugdev"
-      "video"
-    ];
+    extraGroups = [ "wheel" "docker" "plugdev" "video" ];
     shell = pkgs.zsh;
   };
-  
+
   # Autologin
   systemd.services."getty@tty1" = {
-  overrideStrategy = "asDropin";
-  serviceConfig.ExecStart = ["" "@${pkgs.util-linux}/sbin/agetty agetty --login-program ${config.services.getty.loginProgram} --autologin admin --noclear --keep-baud %I 115200,38400,9600 $TERM"];
+    overrideStrategy = "asDropin";
+    serviceConfig.ExecStart = [
+      ""
+      "@${pkgs.util-linux}/sbin/agetty agetty --login-program ${config.services.getty.loginProgram} --autologin admin --noclear --keep-baud %I 115200,38400,9600 $TERM"
+    ];
   };
 
   # Allow unfree packages
@@ -176,10 +180,10 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
-  
+
   # System version
   system.stateVersion = "25.05";
-  
+
   #Flakes
   nix = {
     package = pkgs.nixVersions.stable;
