@@ -81,9 +81,9 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages = with pkgs; [ intel-media-driver vaapiVdpau libvdpau-va-gl ];
+    extraPackages = with pkgs; [ intel-media-driver libva-vdpau-driver libvdpau-va-gl ];
   };
-  services.xserver.videoDrivers = [ "nvidia" "displaylink" ];
+  services.xserver.videoDrivers = [ "nvidia" "displaylink" "modesetting" ];
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
@@ -127,6 +127,8 @@
       kernelModules = [ "evdi" ];
     };
   };
+
+  systemd.services.dlm.wantedBy = [ "multi-user.target" ];
 
   # UDEV
   services.udev.packages = [ pkgs.librealsense ];
@@ -182,7 +184,7 @@
   };
 
   # System version
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
   #Flakes
   nix = {

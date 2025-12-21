@@ -45,9 +45,6 @@
     minicom
     # Applications
     zenmap
-    android-studio
-    android-tools
-    unityhub
     blender
     google-chrome
     imv
