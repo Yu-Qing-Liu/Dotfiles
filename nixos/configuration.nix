@@ -31,7 +31,12 @@
   };
 
   services.openssh.settings.PasswordAuthentication = true;
-  services.avahi.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   services.openssh.enable = true;
 
   # Bluetooth
@@ -72,6 +77,18 @@
     enable = true;
     drivers = with pkgs; [ hplip ];
     webInterface = true;
+  };
+
+  hardware.printers = {
+    ensureDefaultPrinter = "HP_M139w";
+    ensurePrinters = [
+      {
+        name = "HP_M139w";
+        location = "Home";
+        deviceUri = "ipp://10.0.0.117:631/ipp/print";
+        model = "everywhere";
+      }
+    ];
   };
 
   # Timezone
@@ -157,6 +174,7 @@
 
   # Users
   programs.zsh.enable = true;
+  nix.settings.trusted-users = [ "root" "admin" ];
   users.users.admin = {
     isNormalUser = true;
     description = "admin";
