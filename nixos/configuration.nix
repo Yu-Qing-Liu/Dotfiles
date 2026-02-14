@@ -136,7 +136,7 @@
     usbutils
     librealsense
     efibootmgr
-    mokutil
+    efitools
   ];
 
   boot = {
