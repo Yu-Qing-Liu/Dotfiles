@@ -135,6 +135,7 @@
     zoomPkgs.zoom-us
     usbutils
     librealsense
+    efibootmgr
   ];
 
   boot = {
