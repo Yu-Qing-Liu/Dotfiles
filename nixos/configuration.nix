@@ -128,7 +128,7 @@
   environment.systemPackages = with pkgs; [
     displaylink
     libevdev
-    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    inputs.rose-pine-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
     docker
     docker-buildx
     nvidia-docker

@@ -93,5 +93,11 @@
   
   programs.home-manager.enable = true;
 
+  xdg.desktopEntries."com.google.Chrome" = {
+    name = "Google Chrome";
+    exec = "google-chrome-stable %U";
+    noDisplay = true;
+  };
+
   home.stateVersion = "25.05";
 }

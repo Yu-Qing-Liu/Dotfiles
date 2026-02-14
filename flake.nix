@@ -22,6 +22,7 @@
     };
   in {
   nixosConfigurations = {
+    # Change 'yql' hostname if required.
     yql = lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs zoomPkgs; };

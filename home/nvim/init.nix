@@ -2,6 +2,6 @@
 
 {
   programs.neovim = {
-    extraLuaConfig = builtins.readFile ../../dev/nvim/init.lua;
+    initLua = builtins.readFile ../../dev/nvim/init.lua;
   };
 }
