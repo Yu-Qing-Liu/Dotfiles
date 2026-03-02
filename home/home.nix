@@ -44,6 +44,8 @@
     psmisc
     minicom
     # Applications
+    android-studio
+    android-studio-tools
     zenmap
     blender
     google-chrome
